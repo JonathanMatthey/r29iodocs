@@ -1,0 +1,145 @@
+{
+    "endpoints": [
+        {
+            "name": "Story",
+            "methods": [
+                {
+                    "MethodName": "all stories",
+                    "Synopsis": "Returns all stories",
+                    "HTTPMethod": "GET",
+                    "URI": "/stories",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                    ]
+                },
+                {
+                    "MethodName": "a story",
+                    "Synopsis": "Returns a story for the given ID",
+                    "HTTPMethod": "GET",
+                    "URI": "/stories/:id",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "urn:uuid:865fa2bb-a865-4160-9bc4-5b19e5dcdc83",
+                            "Type": "string",
+                            "Description": "story id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "story",
+                    "Synopsis": "creates a new story, returns a unique id to that story",
+                    "HTTPMethod": "POST",
+                    "URI": "/stories",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                    ]
+                },
+                {
+                    "MethodName": "story",
+                    "Synopsis": "updates a story by passing all of its attributes",
+                    "HTTPMethod": "PUT",
+                    "URI": "/stories/:id",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "urn:uuid:865fa2bb-a865-4160-9bc4-5b19e5dcdc83",
+                            "Type": "string",
+                            "Description": "story id"
+                        },
+                        {
+                            "Name": "title",
+                            "Required": "Y",
+                            "Default": "J.Crew's New Collab",
+                            "Type": "string",
+                            "Description": "the main title of the story"
+                        },
+                        {
+                            "Name": "storyType",
+                            "Required": "Y",
+                            "Default": "News",
+                            "Type": "string",
+                            "Description": "the type of story such as news, photo collection, shopping, for MVP: just News"
+                        },
+                        {
+                            "Name": "content",
+                            "Required": "Y",
+                            "Default": "Lorem Ipsum...",
+                            "Type": "string",
+                            "Description": "the story body, in bbcode + semantic markup"
+                        },
+                        {
+                            "Name": "author",
+                            "Required": "Y",
+                            "Default": "Kelly",
+                            "Type": "string",
+                            "Description": "author name"
+                        },
+                        {
+                            "Name": "status",
+                            "Required": "Y",
+                            "Default": "edit",
+                            "Type": "string",
+                            "Description": "status mode that story is in such as Edit | Scheduled"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "story",
+                    "Synopsis": "updates one or more story attributes",
+                    "HTTPMethod": "PATCH",
+                    "URI": "/stories",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "urn:uuid:865fa2bb-a865-4160-9bc4-5b19e5dcdc83",
+                            "Type": "string",
+                            "Description": "story id"
+                        },
+                        {
+                            "Name": "title",
+                            "Required": "Y",
+                            "Default": "J.Crew's New Collab",
+                            "Type": "string",
+                            "Description": "the main title of the story"
+                        },
+                        {
+                            "Name": "storyType",
+                            "Required": "Y",
+                            "Default": "News",
+                            "Type": "string",
+                            "Description": "the type of story such as news, photo collection, shopping, for MVP: just News"
+                        },
+                        {
+                            "Name": "content",
+                            "Required": "Y",
+                            "Default": "Lorem Ipsum...",
+                            "Type": "string",
+                            "Description": "the story body, in bbcode + semantic markup"
+                        },
+                        {
+                            "Name": "author",
+                            "Required": "Y",
+                            "Default": "Kelly",
+                            "Type": "string",
+                            "Description": "author name"
+                        },
+                        {
+                            "Name": "status",
+                            "Required": "Y",
+                            "Default": "edit",
+                            "Type": "string",
+                            "Description": "status mode that story is in such as Edit | Scheduled"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
