@@ -13,7 +13,7 @@
                     ]
                 },
                 {
-                    "MethodName": "a story",
+                    "MethodName": "story",
                     "Synopsis": "Returns a story for the given ID",
                     "HTTPMethod": "GET",
                     "URI": "/stories/:id",
@@ -136,6 +136,22 @@
                             "Default": "edit",
                             "Type": "string",
                             "Description": "status mode that story is in such as Edit | Scheduled"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "mine story",
+                    "Synopsis": "starts mining a story, returns a set of nouns and positions with ambiguities",
+                    "HTTPMethod": "POST",
+                    "URI": "/stories/:id/mine",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "urn:uuid:865fa2bb-a865-4160-9bc4-5b19e5dcdc83",
+                            "Type": "string",
+                            "Description": "story id"
                         }
                     ]
                 }
