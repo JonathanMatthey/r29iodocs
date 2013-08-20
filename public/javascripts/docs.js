@@ -10,7 +10,7 @@
         var methodsList = $('ul.methods', context || null);
 
         for (var i = 0, len = methodsList.length; i < len; i++) {
-            $(methodsList[i]).slideDown();
+            $(methodsList[i]).slideDown(150);
         }
     }
 
@@ -37,7 +37,7 @@
             // Some endpoints are collapsed, expand them.
             for (var x = 0; x < endpointsLength; x++) {
                 var methodsList = $(endpoints[x]);
-                methodsList.slideDown();
+                methodsList.slideDown(150);
                 methodsList.parent().toggleClass('expanded', true)
 
             }
@@ -48,7 +48,7 @@
 
             for (var x = 0; x < endpointsLength; x++) {
                 var methodsList = $(endpoints[x]);
-                methodsList.slideUp();
+                methodsList.slideUp(150);
                 methodsList.parent().toggleClass('expanded', false)
             }
         }
@@ -69,12 +69,12 @@
 
             // First make sure all the hidden endpoints are expanded.
             for (var x = 0; x < methodListsLength; x++) {
-                $(methodLists[x]).slideDown();
+                $(methodLists[x]).slideDown(150);
             }
 
             // Now make sure all the hidden methods are expanded.
             for (var y = 0; y < methodFormsLength; y++) {
-                $(methodForms[y]).slideDown();
+                $(methodForms[y]).slideDown(150);
             }
 
         } else {
@@ -83,7 +83,7 @@
                 visibleMethodFormsLength = visibleMethodForms.length;
 
             for (var i = 0; i < visibleMethodFormsLength; i++) {
-                $(visibleMethodForms[i]).slideUp();
+                $(visibleMethodForms[i]).slideUp(150);
             }
         }
 
@@ -109,7 +109,7 @@
         })
 
         $(visibleMethods).each(function(i, method) {
-            $(method).slideUp();
+            $(method).slideUp(150);
         })
 
         $(endpoint).toggleClass('expanded', true);
@@ -133,7 +133,7 @@
         })
 
         $(hiddenMethods).each(function(i, method) {
-            $(method).slideDown();
+            $(method).slideDown(150);
         })
 
         $(endpoint).toggleClass('expanded', true);
