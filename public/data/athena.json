@@ -7,7 +7,7 @@
                     "MethodName": "all stories",
                     "Synopsis": "Returns all stories",
                     "HTTPMethod": "GET",
-                    "URI": "/stories",
+                    "URI": "/story",
                     "RequiresOAuth": "N",
                     "parameters": [
                     ]
@@ -16,13 +16,13 @@
                     "MethodName": "story",
                     "Synopsis": "Returns a story for the given ID",
                     "HTTPMethod": "GET",
-                    "URI": "/stories/:id",
+                    "URI": "/story/:id",
                     "RequiresOAuth": "N",
                     "parameters": [
                         {
                             "Name": "id",
                             "Required": "Y",
-                            "Default": "urn:uuid:865fa2bb-a865-4160-9bc4-5b19e5dcdc83",
+                            "Default": "urn:uuid:3868cc63-6ff5-3a16-a0ae-61599afce489",
                             "Type": "string",
                             "Description": "story id"
                         }

@@ -447,6 +447,12 @@ li {
 
     }
 
+    .clear-results{
+      margin: 5px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
     // Instead of this indicator, maybe do a validation check on attempt and tell them to set their key/secret.
 /*    &.authrequired .http-method {
         background-image: url(/images/lock.png);
@@ -481,9 +487,12 @@ li {
 
     td, pre {
         @include monospace;
-        font-family: Arial;
         font-size: 12px;
         font-weight: normal;
+    }
+
+    td{
+        font-family: Arial;
     }
 
     h2 {
@@ -494,6 +503,7 @@ li {
     pre {
         font-size: 12px;
         overflow: auto;
+        padding: 5px;
         border: 1px solid rgba(0,0,0,0.2);
         background-color: rgba(255,255,255,0.4);
 
@@ -504,6 +514,19 @@ li {
         &.error {
             background-color: rgba(255,66,66,0.2);
         }
+    }
+
+    .result{
+      .select-all{
+        float:right;
+        font-size:12px;
+      }
+
+      h4{
+        margin: 20px 0 10px;
+      }
+
+
     }
 }
 

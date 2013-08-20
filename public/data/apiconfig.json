@@ -2,8 +2,8 @@
     "athena": {
       "name": "Athena",
       "protocol": "http",
-      "baseURL": "api.lowercase.sample.com",
-      "publicPath": "/v1",
+      "baseURL": "localhost:20000",
+      "publicPath": "/api",
       "auth": "key",
       "keyParam": "api_key_var_name",
       "headers": {
