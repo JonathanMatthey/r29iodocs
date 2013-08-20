@@ -6,11 +6,13 @@ $get: #e7f0f7;
 $post: #e7f6ec;
 $put: #f9f2e9;
 $delete: #f5e8e8;
+$patch: #F7DAD6;
 
 /* Mixins */
 /*
   Setting colors for a method container, the form, and http method indicator
 */
+
 @mixin method($method: 'get', $color: $get) {
     .#{$method} {
         background: $color;
@@ -313,7 +315,6 @@ li {
 .credentials {
     background-color: #f4f4e1;
     border: 1px solid darken(#f4f4e1, 30%);
-    @include border-radius(5px);
     @include clearfix;
     padding: 15px;
 
@@ -397,12 +398,10 @@ li {
 .method {
     font-size: 14px;
     border: 1px solid #eee;
-    @include border-radius(5px);
     margin: 10px 0;
 
     .title {
         overflow: hidden;
-        @include border-radius(5px);
 
         &:hover {
             background-color: rgba(255,255,255, 0.5);
@@ -441,7 +440,6 @@ li {
             text-align: center;
             margin: 0;
             @include monospace;
-            @include border-radius(5px);
             color: #fff;
             line-height: 33px;
             float: left;
@@ -483,6 +481,9 @@ li {
 
     td, pre {
         @include monospace;
+        font-family: Arial;
+        font-size: 12px;
+        font-weight: normal;
     }
 
     h2 {
@@ -510,6 +511,7 @@ li {
 @include method('post', $post);
 @include method('put', $put);
 @include method('delete', $delete);
+@include method('patch', $patch);
 
 
 .ir {
@@ -560,6 +562,22 @@ li {
 
 .clearfix {
   zoom: 1;
+}
+
+#io-footer{
+  margin-top:10px;
+}
+
+.f-left {
+  font-size: 8pt;
+  text-align: left;
+  float: left;
+}
+
+.f-right {
+  font-size: 8pt;
+  text-align: right;
+  float: right;
 }
 
 @media all and (orientation:portrait) {
