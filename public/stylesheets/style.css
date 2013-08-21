@@ -588,16 +588,16 @@ li {
 
 /* line 17, scss/style.scss */
 .put {
-  background: #f9f2e9;
-  border-color: #e9cead;
+  background: #f9e7c3;
+  border-color: #f2cb7d;
 }
 /* line 21, scss/style.scss */
 .put .http-method {
-  background-color: #b06300;
+  background-color: #8a5c00;
 }
 /* line 25, scss/style.scss */
 .put th, .put td {
-  border-bottom: 1px solid #e3c399;
+  border-bottom: 1px solid #f0c266;
 }
 
 /* line 17, scss/style.scss */
@@ -616,16 +616,16 @@ li {
 
 /* line 17, scss/style.scss */
 .patch {
-  background: #f7dad6;
-  border-color: #eba096;
+  background: #f9f8db;
+  border-color: #eeeb99;
 }
 /* line 21, scss/style.scss */
 .patch .http-method {
-  background-color: #9b1300;
+  background-color: #a29d00;
 }
 /* line 25, scss/style.scss */
 .patch th, .patch td {
-  border-bottom: 1px solid #e68d81;
+  border-bottom: 1px solid #eae784;
 }
 
 /* line 540, scss/style.scss */

@@ -166,12 +166,28 @@
             "name": "Topic Graphs",
             "methods": [
                 {
-                    "MethodName": "all topicgraphs",
+                    "MethodName": "all topics",
                     "Synopsis": "",
                     "HTTPMethod": "GET",
-                    "URI": "/taxonomy",
+                    "URI": "/topic",
                     "RequiresOAuth": "N",
                     "parameters": [
+                    ]
+                },
+                {
+                    "MethodName": "graph",
+                    "Synopsis": "",
+                    "HTTPMethod": "GET",
+                    "URI": "/topic/graph/:id",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "Event-The_Hunger_Games",
+                            "Type": "string",
+                            "Description": ""
+                        }
                     ]
                 }
             ]
@@ -180,12 +196,170 @@
             "name": "Taxonomy",
             "methods": [
                 {
+                    "MethodName": "all taxonomies",
+                    "Synopsis": "",
+                    "HTTPMethod": "GET",
+                    "URI": "/taxonomy/schemes",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                    ]
+                },
+                {
                     "MethodName": "all taxonomy",
                     "Synopsis": "mine story as defined by :id",
                     "HTTPMethod": "GET",
-                    "URI": "/taxonomy",
+                    "URI": "/topic",
                     "RequiresOAuth": "N",
                     "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "http://data.refinery29.com/resource/Taxonomy-Beauty",
+                            "Type": "string",
+                            "Description": ""
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "get taxonomy children ?",
+                    "Synopsis": "",
+                    "HTTPMethod": "GET",
+                    "URI": "/taxonomy/scheme/:id/children",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "http://data.refinery29.com/resource/Taxonomy-Beauty",
+                            "Type": "string",
+                            "Description": ""
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "get concepts ?? ",
+                    "Synopsis": "",
+                    "HTTPMethod": "GET",
+                    "URI": "/taxonomy/concepts/:id",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "http://data.refinery29.com/resource/ProductDomain-Beauty",
+                            "Type": "string",
+                            "Description": ""
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "create new schemes ?",
+                    "Synopsis": "",
+                    "HTTPMethod": "POST",
+                    "URI": "/taxonomy/schemes",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": ""
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "create new concepts ?",
+                    "Synopsis": "",
+                    "HTTPMethod": "POST",
+                    "URI": "/taxonomy/concepts",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": ""
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "update schemes ?",
+                    "Synopsis": "",
+                    "HTTPMethod": "PUT",
+                    "URI": "/taxonomy/schemes/:id",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": ""
+                        },
+                        {
+                            "Name": "label",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": ""
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "update concepts ?",
+                    "Synopsis": "",
+                    "HTTPMethod": "PUT",
+                    "URI": "/taxonomy/concepts/:id",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": ""
+                        },
+                        {
+                            "Name": "label",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": ""
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "delete scheme ?",
+                    "Synopsis": "",
+                    "HTTPMethod": "DELETE",
+                    "URI": "/taxonomy/concepts/:id",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": ""
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "delete concept ?",
+                    "Synopsis": "",
+                    "HTTPMethod": "DELETE",
+                    "URI": "/taxonomy/schemes/:id",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "id",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": ""
+                        }
                     ]
                 }
             ]
