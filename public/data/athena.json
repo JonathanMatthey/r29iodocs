@@ -138,12 +138,17 @@
                             "Description": "status mode that story is in such as Edit | Scheduled"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "Story Processing",
+            "methods": [
                 {
-                    "MethodName": "mine story",
-                    "Synopsis": "starts mining a story, returns a set of nouns and positions with ambiguities",
+                    "MethodName": "process",
+                    "Synopsis": "mine story as defined by :id",
                     "HTTPMethod": "POST",
-                    "URI": "/stories/:id/mine",
+                    "URI": "/process/:id",
                     "RequiresOAuth": "N",
                     "parameters": [
                         {
@@ -153,6 +158,34 @@
                             "Type": "string",
                             "Description": "story id"
                         }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Topic Graphs",
+            "methods": [
+                {
+                    "MethodName": "all topicgraphs",
+                    "Synopsis": "",
+                    "HTTPMethod": "GET",
+                    "URI": "/taxonomy",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Taxonomy",
+            "methods": [
+                {
+                    "MethodName": "all taxonomy",
+                    "Synopsis": "mine story as defined by :id",
+                    "HTTPMethod": "GET",
+                    "URI": "/taxonomy",
+                    "RequiresOAuth": "N",
+                    "parameters": [
                     ]
                 }
             ]
